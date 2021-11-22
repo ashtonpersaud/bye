@@ -17,7 +17,6 @@ class byeSkill(MycroftSkill):
     @intent_handler('greeting.intent')
     def handle_not_are_you_intent(self, message):
         self.speak_dialog("Bye Have a good day")
-        time.sleep(1.5)
         serA = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
         serA.flush()
         serA.write(b"bye")
