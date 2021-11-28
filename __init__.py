@@ -16,19 +16,19 @@ class byeSkill(MycroftSkill):
 
     @intent_handler('bye.intent')
     def handle_not_are_you_intent(self, message):
+        #serA = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
+        #serA.flush()
+        #serA.write(b"wave")
+        #serB = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
+        #serB.flush()
+        #serB.write(b"wave")        
+        #serC = serial.Serial('/dev/ttyACM2', 9600, timeout=1)
+        #serC.flush()
+        #serC.write(b"wave")
+        #serD = serial.Serial('/dev/ttyACM3', 9600, timeout=1)
+        #serD.flush()
+        #serD.write(b"wave")
         self.speak_dialog("Bye Have a good day")
-        serA = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
-        serA.flush()
-        serA.write(b"bye")
-        serB = serial.Serial('/dev/ttyACM1', 9600, timeout=1)
-        serB.flush()
-        serB.write(b"bye")        
-        serC = serial.Serial('/dev/ttyACM2', 9600, timeout=1)
-        serC.flush()
-        serC.write(b"bye")
-        serD = serial.Serial('/dev/ttyACM3', 9600, timeout=1)
-        serD.flush()
-        serD.write(b"bye")
       
 
     def stop(self):
